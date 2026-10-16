@@ -1,0 +1,185 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 430,
+      "y": 55,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "uang=200000",
+      "x": 420,
+      "y": 168,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "text": "jumlah_buku=3;\njumlah_bulpoin=2;\njumlah_flashdisk=1;",
+      "x": 418,
+      "y": 301,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "text": "harga_buku=25000;\nharga_bulpoin=8000;\nharga_flashdisk=75000;",
+      "x": 402,
+      "y": 438,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "total_harga_buku=jumlah_buku*harga_buku;total_harga_bulpoin=harga_bulpoin*jumlah_bulpoin;total_harga_flashdisk=jumlah_flashdisk*harga_flashdisk",
+      "x": 403,
+      "y": 593,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "total_harga=total_harga_buku+total_harga_bulpoin+total_harga_flashdisk",
+      "x": 379,
+      "y": 782,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "diskon=total_harga*10/100",
+      "x": 382,
+      "y": 900,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "total_setelah_diskon=total_harga-diskon",
+      "x": 378,
+      "y": 1010,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "pajak=total_setelah_diskon*11/100",
+      "x": 382,
+      "y": 1112,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "total_bayar=total_setelah_diskon+pajak",
+      "x": 370,
+      "y": 1217,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "process",
+      "text": "total_kembalian=uang-total_bayar",
+      "x": 375,
+      "y": 1326,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 13,
+      "type": "end",
+      "text": "End",
+      "x": 389,
+      "y": 1595,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 14,
+      "type": "output",
+      "text": "total_kembalian",
+      "x": 354,
+      "y": 1464,
+      "w": 190,
+      "h": 70
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "branch": null
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "branch": null
+    },
+    {
+      "from": 14,
+      "to": 13,
+      "branch": null
+    }
+  ],
+  "nextId": 15
+}
