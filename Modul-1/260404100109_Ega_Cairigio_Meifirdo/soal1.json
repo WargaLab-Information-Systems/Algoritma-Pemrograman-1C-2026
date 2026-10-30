@@ -1,0 +1,185 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 10,
+      "y": 43,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "J_buku=3; H_buku=25000; J_pulpen=2; H_pulpen=8000; J_flashdisk=1; H_flashdisk=75000; Uang_bayar=200000; Diskon_persen=10; Pajak_persen=11",
+      "x": 223,
+      "y": 37,
+      "w": 270,
+      "h": 205
+    },
+    {
+      "id": 3,
+      "type": "process",
+      "text": "T_buku = J_buku * H_buku",
+      "x": 544,
+      "y": 46,
+      "w": 190,
+      "h": 66
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "T_pulpen = J_pulpen * H_pulpen",
+      "x": 778,
+      "y": 46,
+      "w": 190,
+      "h": 66
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "T_flashdisk = J_flashdisk * H_flashdisk",
+      "x": 1033,
+      "y": 45,
+      "w": 190,
+      "h": 66
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "T_sblm_diskon = T_buku + T_pulpen + T_flashdisk",
+      "x": 1026,
+      "y": 162,
+      "w": 205,
+      "h": 75
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "Diskon = T_sblm_diskon * Diskon_persen / 100",
+      "x": 774,
+      "y": 162,
+      "w": 200,
+      "h": 75
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "H_stlh_diskon = T_sblm_diskon - Diskon",
+      "x": 540,
+      "y": 162,
+      "w": 185,
+      "h": 75
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "Pajak = H_stlh_diskon * Pajak_persen / 100",
+      "x": 248,
+      "y": 263,
+      "w": 190,
+      "h": 80
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "T_bayar = H_stlh_diskon + Pajak",
+      "x": 248,
+      "y": 398,
+      "w": 190,
+      "h": 65
+    },
+    {
+      "id": 11,
+      "type": "process",
+      "text": "Kembalian = Uang_bayar - T_bayar",
+      "x": 534,
+      "y": 398,
+      "w": 190,
+      "h": 66
+    },
+    {
+      "id": 12,
+      "type": "output",
+      "text": "T_buku, T_pulpen, T_flashdisk, T_sblm_diskon, Diskon, H_stlh_diskon, Pajak, T_bayar, Kembalian",
+      "x": 496,
+      "y": 532,
+      "w": 265,
+      "h": 135
+    },
+    {
+      "id": 13,
+      "type": "end",
+      "text": "End",
+      "x": 849,
+      "y": 572,
+      "w": 150,
+      "h": 58
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "branch": null
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "branch": null
+    }
+  ],
+  "nextId": 14
+}
