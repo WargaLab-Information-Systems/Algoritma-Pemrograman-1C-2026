@@ -1,0 +1,185 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 10,
+      "y": 10,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "uang=200000; buku=25000;\nbulpen=8000;\nflashdisk=75000; diskon=0.10; PPN=0.11",
+      "x": 229,
+      "y": 10,
+      "w": 190,
+      "h": 135
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "harga_buku = 3 * buku",
+      "x": 509,
+      "y": 44,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "harga_bulpen = 2 * bulpen",
+      "x": 510,
+      "y": 143,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "harga_flashdisk = 1 * flashdisk",
+      "x": 509,
+      "y": 242,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "total_belanja=harga_buku+harga_bulpen+harga_flashdisk",
+      "x": 509,
+      "y": 340,
+      "w": 180,
+      "h": 70
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "diskon = 0.10 * total_belanja",
+      "x": 510,
+      "y": 442,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "setelah_diskon = total_belanja-diskon",
+      "x": 510,
+      "y": 548,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "pajak = total_belanja*0.11",
+      "x": 510,
+      "y": 658,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "process",
+      "text": "total_bayar= setelah_diskon + pajak",
+      "x": 510,
+      "y": 773,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "kembalian = uang - total_bayar",
+      "x": 510,
+      "y": 877,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 14,
+      "type": "end",
+      "text": "End",
+      "x": 206,
+      "y": 374,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 15,
+      "type": "output",
+      "text": "\"harga buku :\",harga_buku; \n\"harga bulpen :\",harga_bulpen;\n\"harga flashdisk :\",harga_flashdisk;\n\"total belanja :\",total_belanja;\n\"Diskon :\",diskon;\n\"harga setelah diskon :\",setelah_diskon;\n\"Pajak :\",pajak;\n\"total bayar :\",total_bayar;\n\"kembalian :\",kembalian",
+      "x": 100,
+      "y": 503,
+      "w": 295,
+      "h": 350
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "branch": null
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 15,
+      "branch": null
+    },
+    {
+      "from": 15,
+      "to": 14,
+      "branch": null
+    }
+  ],
+  "nextId": 16
+}
