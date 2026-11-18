@@ -1,0 +1,255 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 47,
+      "y": 64,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "total_belanja = total_buku + total_pulpen + total_flasdisk",
+      "x": 52,
+      "y": 179,
+      "w": 390,
+      "h": 100
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "diskon = total_belanja * 10 / 100",
+      "x": 102,
+      "y": 347,
+      "w": 290,
+      "h": 70
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "harga_setelah_diskon = total_belanja - diskon",
+      "x": 481,
+      "y": 350,
+      "w": 350,
+      "h": 70
+    },
+    {
+      "id": 14,
+      "type": "process",
+      "text": "pajak = harga_setelah_diskon * 11 / 100",
+      "x": 927,
+      "y": 350,
+      "w": 310,
+      "h": 70
+    },
+    {
+      "id": 16,
+      "type": "process",
+      "text": "total_pembayaran = harga_setelah_diskon + pajak",
+      "x": 914,
+      "y": 506,
+      "w": 350,
+      "h": 70
+    },
+    {
+      "id": 18,
+      "type": "process",
+      "text": "uang_dibayar = 200000",
+      "x": 524,
+      "y": 504,
+      "w": 250,
+      "h": 70
+    },
+    {
+      "id": 19,
+      "type": "process",
+      "text": "kembalian = uang_dibayar - total_pembayaran",
+      "x": 90,
+      "y": 508,
+      "w": 350,
+      "h": 70
+    },
+    {
+      "id": 21,
+      "type": "end",
+      "text": "End",
+      "x": 194,
+      "y": 658,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 22,
+      "type": "input",
+      "text": "harga_buku = 25000; dibeli = 3",
+      "x": 257,
+      "y": 59,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 23,
+      "type": "output",
+      "text": "total_buku",
+      "x": 719,
+      "y": 57,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 24,
+      "type": "process",
+      "text": "total_buku = harga_buku * dibeli",
+      "x": 495,
+      "y": 59,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 25,
+      "type": "input",
+      "text": "harga_pulpen = 8000; dibeli = 2",
+      "x": 975,
+      "y": 58,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 26,
+      "type": "process",
+      "text": "total_pulpen = harga_pulpen * dibeli",
+      "x": 1223,
+      "y": 60,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 27,
+      "type": "output",
+      "text": "total_pulpen",
+      "x": 1218,
+      "y": 178,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 29,
+      "type": "input",
+      "text": "harga_flasdisk = 75000; dibeli = 1",
+      "x": 964,
+      "y": 180,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 30,
+      "type": "process",
+      "text": "total_flasdisk = harga_flasdisk * dibeli",
+      "x": 719,
+      "y": 193,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 31,
+      "type": "output",
+      "text": "total_flasdisk",
+      "x": 486,
+      "y": 191,
+      "w": 190,
+      "h": 70
+    }
+  ],
+  "edges": [
+    {
+      "from": 18,
+      "to": 19,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 14,
+      "branch": null
+    },
+    {
+      "from": 14,
+      "to": 16,
+      "branch": null
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "branch": null
+    },
+    {
+      "from": 19,
+      "to": 21,
+      "branch": null
+    },
+    {
+      "from": 1,
+      "to": 22,
+      "branch": null
+    },
+    {
+      "from": 22,
+      "to": 24,
+      "branch": null
+    },
+    {
+      "from": 24,
+      "to": 23,
+      "branch": null
+    },
+    {
+      "from": 23,
+      "to": 25,
+      "branch": null
+    },
+    {
+      "from": 25,
+      "to": 26,
+      "branch": null
+    },
+    {
+      "from": 26,
+      "to": 27,
+      "branch": null
+    },
+    {
+      "from": 27,
+      "to": 29,
+      "branch": null
+    },
+    {
+      "from": 29,
+      "to": 30,
+      "branch": null
+    },
+    {
+      "from": 30,
+      "to": 31,
+      "branch": null
+    },
+    {
+      "from": 31,
+      "to": 8,
+      "branch": null
+    }
+  ],
+  "nextId": 32
+}
