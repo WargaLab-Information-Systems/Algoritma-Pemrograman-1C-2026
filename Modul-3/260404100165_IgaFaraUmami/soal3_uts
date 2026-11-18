@@ -1,0 +1,46 @@
+jumlah = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
+total = 0
+tertinggi = -1
+terendah = 101
+
+for i in range(10):
+    print("\nMahasiswa ke-", i + 1)
+    nama = input("Nama: ")
+    tugas = float(input("Nilai tugas: "))
+    uts = float(input("Nilai UTS: "))
+    uas = float(input("Nilai UAS: "))
+
+    akhir = tugas * 0.3 + uts * 0.3 + uas * 0.4
+
+    if akhir >= 85:
+        kategori = "A"
+    elif akhir >= 75:
+        kategori = "B"
+    elif akhir >= 65:
+        kategori = "C"
+    elif akhir >= 50:
+        kategori = "D"
+    else:
+        kategori = "E"
+
+    jumlah[kategori] += 1
+    total += akhir
+
+    print("Nilai akhir:", round(akhir, 2))
+    print("Kategori:", kategori)
+
+    if akhir > tertinggi:
+        tertinggi = akhir
+        nama_tertinggi = nama
+
+    if akhir < terendah:
+        terendah = akhir
+        nama_terendah = nama
+
+print("\n=== REKAP NILAI ===")
+for k in jumlah:
+    print("Jumlah", k, ":", jumlah[k])
+
+print("Nilai tertinggi:", tertinggi, "-", nama_tertinggi)
+print("Nilai terendah:", terendah, "-", nama_terendah)
+print("Rata-rata:", round(total / 10, 2))
